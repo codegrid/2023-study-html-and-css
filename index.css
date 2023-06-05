@@ -36,7 +36,7 @@ header {
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  background-image: url(/images/top.svg);
+  background-image: url(../images/top.svg);
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -157,21 +157,21 @@ section ol {
 }
 
 .uidesign {
-  background-image: url(/images/uidesign.svg);
+  background-image: url(./images/uidesign.svg);
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 .painting {
-  background-image: url(/images/painting.svg);
+  background-image: url(./images/painting.svg);
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 .embroidery {
-  background-image: url(/images/embroidery.png);
+  background-image: url(./images/embroidery.png);
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
