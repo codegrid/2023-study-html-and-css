@@ -23,7 +23,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   color: #0e0f16;
-  line-height: 160%;
+  line-height: 1.6;
   background-color: #b8bec0;
 }
 
@@ -36,7 +36,7 @@ header {
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  background-image: url(../images/top.svg);
+  background-image: url(./images/top.svg);
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
