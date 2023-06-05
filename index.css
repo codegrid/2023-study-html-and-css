@@ -77,16 +77,9 @@ section {
   margin-bottom: 42px;
 }
 
-.aboutme-logo {
-  display: block;
-  width: 200px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  margin-bottom: 42px;
-}
-
-.name {
-  font-size: 20px;
+section ol {
+  display: grid;
+  row-gap: 16px;
 }
 
 section h3 {
@@ -100,6 +93,41 @@ section h4 {
   font-size: 16px;
   font-weight: 500;
   color: #6e7172;
+}
+
+footer {
+  display: flex;
+  background-color: #f6f6f6;
+  align-items: center;
+  column-gap: 24px;
+  padding: 24px 42px;
+}
+
+footer p {
+  display:block;
+  width: 100px;
+}
+
+footer ul {
+  display: flex;
+  column-gap: 16px;
+}
+
+footer li {
+  display: block;
+  width: 25px;
+}
+
+.aboutme-logo {
+  display: block;
+  width: 200px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-bottom: 42px;
+}
+
+.name {
+  font-size: 20px;
 }
 
 .history {
@@ -123,12 +151,6 @@ section h4 {
   display: block;
   width: 320px;
 }
-
-section ol {
-  display: grid;
-  row-gap: 16px;
-}
-
 
 .works-logo {
   display: block;
@@ -175,28 +197,4 @@ section ol {
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
-}
-
-
-footer {
-  display: flex;
-  background-color: #f6f6f6;
-  align-items: center;
-  column-gap: 24px;
-  padding: 24px 42px;
-}
-
-footer p {
-  display:block;
-  width: 100px;
-}
-
-footer ul {
-  display: flex;
-  column-gap: 16px;
-}
-
-footer li {
-  display: block;
-  width: 25px;
 }
