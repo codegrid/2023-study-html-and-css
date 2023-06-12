@@ -8,6 +8,15 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #0e0f16;
+  line-height: 1.6;
+  background-color: #b8bec0;
+}
+
 ol,
 ul {
   list-style: none;
@@ -18,14 +27,6 @@ a {
   text-decoration: none;
 }
 
-body {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: #0e0f16;
-  line-height: 1.6;
-  background-color: #b8bec0;
-}
 
 img {
   max-width: 100%;
@@ -39,7 +40,7 @@ header {
   background: url(./images/top-book.png), url(./images/top-background.png);
   background-size: contain;
   background-position: center center;
-  background-repeat: no-repeat, repeat;
+  background-repeat: no-repeat, repeat-x;
 }
 
 
