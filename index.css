@@ -41,13 +41,14 @@ header {
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat, repeat-x;
+  margin-bottom: 42px;
 }
 
 
 header h1 {
   display: block;
-  width: 150px;
-  margin-top: 120px;
+  max-width: 150px;
+  margin-top: 168px;
   margin-bottom: 2px;
 }
 
@@ -58,30 +59,23 @@ header ul {
 
 header li {
   display: block;
-  width: 30px;
+  max-width: 30px;
 }
 
 main {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:repeat(auto-fit,minmax(490px,1fr));
   column-gap: 42px;
   row-gap: 48px;
-  margin-left: 42px;
-  margin-right: 42px;
+  margin-inline: 42px;
 }
 
 section {
   align-items: start;
   background-color: #f6f6f6;
   padding: 36px;
-  margin-top: 42px;
-  margin-bottom: 42px;
 }
 
-section ol {
-  display: grid;
-  row-gap: 16px;
-}
 
 section h3 {
   font-size: 16px;
@@ -102,6 +96,7 @@ footer {
   align-items: center;
   column-gap: 24px;
   padding: 24px 42px;
+  margin-top: 42px;
 }
 
 footer p {
@@ -139,10 +134,15 @@ footer li {
 }
 
 
+.skill {
+  display: grid;
+  row-gap: 16px;
+}
 
 .skill li {
   display: grid;
-  grid-template-columns: 150px 320px;
+  /* grid-template-columns: 150px 320px; */
+  grid-template-columns:150px 2fr;
   column-gap: 16px;
   row-gap: 16px;
   align-items: center;
@@ -151,6 +151,13 @@ footer li {
 .figma-img, .clipstudiopaint-img, .adobeillustrator-img {
   display: block;
   width: 320px;
+  height:4px;
+}
+
+
+.award {
+  display: grid;
+  row-gap: 16px;
 }
 
 .works-logo {
@@ -181,21 +188,21 @@ footer li {
 
 .uidesign {
   background-image: url(./images/uidesign.svg);
-  background-size: contain;
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 .painting {
   background-image: url(./images/painting.svg);
-  background-size: contain;
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 .embroidery {
   background-image: url(./images/embroidery.png);
-  background-size: contain;
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
