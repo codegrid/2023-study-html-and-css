@@ -38,7 +38,7 @@ header {
   align-items: center;
   height: 100vh;
   background: url(./images/top-book.png), url(./images/top-background.png);
-  background-size: contain;
+  background-size: clamp(500px, 100vw , 1000px) auto, auto 100vh;
   background-position: center center;
   background-repeat: no-repeat, repeat-x;
   margin-bottom: 42px;
@@ -64,7 +64,8 @@ header li {
 
 main {
   display: grid;
-  grid-template-columns:repeat(auto-fit,minmax(490px,1fr));
+  /* 236px = 320px - 左右のマージン84px (42px*2) */
+  grid-template-columns:repeat(auto-fit,minmax(236px,1fr));
   column-gap: 42px;
   row-gap: 48px;
   margin-inline: 42px;
@@ -140,20 +141,28 @@ footer li {
 }
 
 .skill li {
-  display: grid;
-  /* grid-template-columns: 150px 320px; */
-  grid-template-columns:150px 2fr;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 8px;
   column-gap: 16px;
-  row-gap: 16px;
   align-items: center;
 }
 
-.figma-img, .clipstudiopaint-img, .adobeillustrator-img {
-  display: block;
-  width: 320px;
-  height:4px;
+.skill-name {
+  width: 150px;
 }
 
+.skill-level {
+  flex-grow: 1;
+  min-width: 160px;
+  max-width: 320px;
+}
+
+.skill-level img {
+  display: block;
+  width: 100%;
+  height:4px;
+}
 
 .award {
   display: grid;
@@ -169,14 +178,16 @@ footer li {
 }
 
 
-.works ul {
+.works .works-list {
+  container-name: works-list;
+  container-type: inline-size;
   display: grid;
   row-gap: 42px;
   margin-top: 36px;
   margin-bottom: 36px;
 }
 
-.works li {
+.works .works-listItem {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -184,25 +195,28 @@ footer li {
   font-size: 36px;
   font-weight: 500;
   color: #f6f6f6;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
-.uidesign {
+.works .works-listItem.-uidesign {
   background-image: url(./images/uidesign.svg);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
 }
 
-.painting {
+.works .works-listItem.-painting {
   background-image: url(./images/painting.svg);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
 }
 
-.embroidery {
+.works .works-listItem.-embroidery {
   background-image: url(./images/embroidery.png);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+}
+
+.works .works-listItem a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: clamp(24px, 15cqw, 36px);
 }
