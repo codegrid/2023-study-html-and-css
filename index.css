@@ -38,7 +38,8 @@ header {
   align-items: center;
   height: 100vh;
   background: url(./images/top-book.png), url(./images/top-background.png);
-  background-size: clamp(500px, 100vw , 1000px) auto, auto 100vh;
+  background-size: contain;
+  background-size: clamp(500px, 100vw, 1000px) auto, auto 100vh;
   background-position: center center;
   background-repeat: no-repeat, repeat-x;
   margin-bottom: 42px;
@@ -48,7 +49,8 @@ header {
 header h1 {
   display: block;
   max-width: 150px;
-  margin-top: 168px;
+  /* ↓ 位置を調整しながら確定 */
+  margin-top: 110px;
   margin-bottom: 2px;
 }
 
