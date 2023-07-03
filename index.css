@@ -64,7 +64,8 @@ header li {
 
 main {
   display: grid;
-  grid-template-columns:repeat(auto-fit,minmax(490px,1fr));
+  /* 236px = 320px - 左右のマージン84px (42px*2) */
+  grid-template-columns:repeat(auto-fit,minmax(236px,1fr));
   column-gap: 42px;
   row-gap: 48px;
   margin-inline: 42px;
