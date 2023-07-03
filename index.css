@@ -38,7 +38,7 @@ header {
   align-items: center;
   height: 100vh;
   background: url(./images/top-book.png), url(./images/top-background.png);
-  background-size: contain;
+  background-size: clamp(500px, 100vw , 1000px) auto, auto 100vh;
   background-position: center center;
   background-repeat: no-repeat, repeat-x;
   margin-bottom: 42px;
