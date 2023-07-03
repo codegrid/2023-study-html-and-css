@@ -164,7 +164,6 @@ footer li {
   height:4px;
 }
 
-
 .award {
   display: grid;
   row-gap: 16px;
@@ -179,14 +178,16 @@ footer li {
 }
 
 
-.works ul {
+.works .works-list {
+  container-name: works-list;
+  container-type: inline-size;
   display: grid;
   row-gap: 42px;
   margin-top: 36px;
   margin-bottom: 36px;
 }
 
-.works li {
+.works .works-listItem {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -194,25 +195,28 @@ footer li {
   font-size: 36px;
   font-weight: 500;
   color: #f6f6f6;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
-.uidesign {
+.works .works-listItem.-uidesign {
   background-image: url(./images/uidesign.svg);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
 }
 
-.painting {
+.works .works-listItem.-painting {
   background-image: url(./images/painting.svg);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
 }
 
-.embroidery {
+.works .works-listItem.-embroidery {
   background-image: url(./images/embroidery.png);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+}
+
+.works .works-listItem a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: clamp(24px, 15cqw, 36px);
 }
