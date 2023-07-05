@@ -15,6 +15,10 @@ body {
   color: #0e0f16;
   line-height: 1.6;
   background-color: #b8bec0;
+  @media (max-width: 496px) 
+   {
+    font-size: 14px;
+  }
 }
 
 ol,
@@ -32,14 +36,20 @@ img {
   max-width: 100%;
 }
 
+span {
+  display: inline-block;
+}
+
 header {
+  container-name: header;
+  container-type: inline-size;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
   background: url(./images/top-book.png), url(./images/top-background.png);
   background-size: contain;
-  background-size: clamp(500px, 100vw, 1000px) auto, auto 100vh;
+  background-size: clamp(800px, 100vw, 1000px) auto, auto 100vh;
   background-position: center center;
   background-repeat: no-repeat, repeat-x;
   margin-bottom: 42px;
@@ -71,30 +81,50 @@ main {
   column-gap: 42px;
   row-gap: 48px;
   margin-inline: 42px;
+  @media (max-width: 496px) 
+   {
+    column-gap: 24px;
+    row-gap:32px;
+    margin-inline: 24px;
+  }
 }
 
 section {
+  container-name:section;
+  container-type:inline-size;
   align-items: start;
   background-color: #f6f6f6;
   padding: 36px;
+  @media (max-width: 496px)
+  {
+    padding:24px;
+  }
 }
 
+section h2 {
+  font-family: 'Cardo', serif;
+  font-size: clamp(24px, 15cqw, 36px);
+  font-weight: 400;
+  white-space: nowrap;
+}
 
 section h3 {
   font-size: 16px;
   font-weight: 500;
   margin-top: 42px;
   margin-bottom: 16px;
+  @media (max-width: 496px) 
+   {
+    font-size: 14px;
+  }
 }
 
-section h4 {
-  font-size: 16px;
-  font-weight: 500;
-  color: #6e7172;
-}
 
 footer {
+  container-name:footer;
+  container-type:inline-size;
   display: flex;
+  flex-wrap: wrap;
   background-color: #f6f6f6;
   align-items: center;
   column-gap: 24px;
@@ -105,16 +135,17 @@ footer {
 footer p {
   display:block;
   width: 100px;
+  min-width: 80px;
 }
 
 footer ul {
   display: flex;
-  column-gap: 16px;
+  column-gap:8px;
 }
 
 footer li {
   display: block;
-  width: 25px;
+  width: clamp(18px,7cqw,25px);
 }
 
 .aboutme-logo {
@@ -127,15 +158,38 @@ footer li {
 
 .name {
   font-size: 20px;
+  @media (max-width: 496px) 
+   {font-size: 16px;
+  }
 }
 
 .history {
   display: grid;
-  grid-template-columns: 1fr 4fr ;
   column-gap: 16px;
   row-gap: 16px;
 }
 
+.history-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap:16px;
+  row-gap:8px;
+}
+
+.history-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #6e7172;
+  width: 100px;
+  @media (max-width: 496px) 
+   {
+    font-size: 14px;
+  }
+}
+
+.history-career {
+  width:80cqw;
+}
 
 .skill {
   display: grid;
