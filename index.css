@@ -15,8 +15,10 @@ body {
   color: #0e0f16;
   line-height: 1.6;
   background-color: #b8bec0;
-  @media (max-width: 496px) 
-   {
+}
+
+@media (max-width: 496px) {
+  body {
     font-size: 14px;
   }
 }
@@ -77,52 +79,58 @@ header li {
 main {
   display: grid;
   /* 236px = 320px - 左右のマージン84px (42px*2) */
-  grid-template-columns:repeat(auto-fit,minmax(236px,1fr));
+  grid-template-columns:repeat(auto-fit, minmax(236px, 1fr));
   column-gap: 42px;
   row-gap: 48px;
   margin-inline: 42px;
-  @media (max-width: 496px) 
-   {
+}
+
+@media (max-width: 496px) {
+  main {
     column-gap: 24px;
-    row-gap:32px;
+    row-gap: 32px;
     margin-inline: 24px;
   }
 }
 
 :is(.aboutme, .works) {
-  container-name:section;
-  container-type:inline-size;
+  container-name: section;
+  container-type: inline-size;
   align-items: start;
   background-color: #f6f6f6;
   padding: 36px;
-  @media (max-width: 496px)
-  {
+}
+
+@media (max-width: 496px) {
+  :is(.aboutme, .works) {
     padding:24px;
   }
 }
 
-:is(.aboutme, .works)h2 {
+:is(.aboutme, .works) h2 {
   font-family: 'Cardo', serif;
   font-size: clamp(24px, 15cqw, 36px);
   font-weight: 400;
   white-space: nowrap;
 }
 
-:is(.aboutme, .works)h3 {
+:is(.aboutme, .works) h3 {
   font-size: 16px;
   font-weight: 500;
   margin-top: 42px;
   margin-bottom: 16px;
-  @media (max-width: 496px) 
-   {
+}
+
+@media (max-width: 496px) {
+  :is(.aboutme, .works) h3 {
     font-size: 14px;
   }
 }
 
 
 footer {
-  container-name:footer;
-  container-type:inline-size;
+  container-name: footer;
+  container-type: inline-size;
   display: flex;
   flex-wrap: wrap;
   background-color: #f6f6f6;
@@ -140,12 +148,12 @@ footer p {
 
 footer ul {
   display: flex;
-  column-gap:8px;
+  column-gap: 8px;
 }
 
 footer li {
   display: block;
-  width: clamp(18px,7cqw,25px);
+  width: clamp(18px, 7cqw, 25px);
 }
 
 .aboutme-logo {
@@ -158,8 +166,11 @@ footer li {
 
 .name {
   font-size: 20px;
-  @media (max-width: 496px) 
-   {font-size: 16px;
+}
+
+@media (max-width: 496px) {
+  .name {
+    font-size: 16px;
   }
 }
 
@@ -172,8 +183,8 @@ footer li {
 .history-list {
   display: flex;
   flex-wrap: wrap;
-  column-gap:16px;
-  row-gap:8px;
+  column-gap: 16px;
+  row-gap: 8px;
 }
 
 .history-title {
@@ -181,14 +192,16 @@ footer li {
   font-weight: 500;
   color: #6e7172;
   width: 100px;
-  @media (max-width: 496px) 
-   {
+}
+
+@media (max-width: 496px) {
+  .history-title {
     font-size: 14px;
   }
 }
 
 .history-career {
-  width:80cqw;
+  width: 80cqw;
 }
 
 .skill {
@@ -217,7 +230,7 @@ footer li {
 .skill-level img {
   display: block;
   width: 100%;
-  height:4px;
+  height: 4px;
 }
 
 .award {
@@ -236,7 +249,6 @@ footer li {
   padding-bottom: 16px;
   margin-bottom: 42px;
 }
-
 
 .works .works-list {
   container-name: works-list;
