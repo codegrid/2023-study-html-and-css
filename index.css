@@ -89,7 +89,7 @@ main {
   }
 }
 
-section {
+:is(.aboutme, .works) {
   container-name:section;
   container-type:inline-size;
   align-items: start;
@@ -101,14 +101,14 @@ section {
   }
 }
 
-section h2 {
+:is(.aboutme, .works)h2 {
   font-family: 'Cardo', serif;
   font-size: clamp(24px, 15cqw, 36px);
   font-weight: 400;
   white-space: nowrap;
 }
 
-section h3 {
+:is(.aboutme, .works)h3 {
   font-size: 16px;
   font-weight: 500;
   margin-top: 42px;
@@ -223,6 +223,10 @@ footer li {
 .award {
   display: grid;
   row-gap: 16px;
+}
+
+.works {
+  display: block;
 }
 
 .works-logo {
