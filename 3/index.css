@@ -1,0 +1,211 @@
+@charset "utf-8";
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* リストの行頭アイコンを非表示 */
+ol,
+ul {
+  list-style: none;
+}
+
+/* リンクの文字色と下線をなくす */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* テキストフォント、文字サイズ、色、行間を指定 */
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #0e0f16;
+  line-height: 160%;
+  background-color: #b8bec0;
+}
+/*画像を100%で表示*/
+img {
+  max-width: 100%;
+}
+/*TOPの画像を画面サイズいっぱいに配置*/
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-image: url(/final/images/top.svg);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/*[ロゴ：AYA body of works]をTOPに場所を指定して配置*/
+header h1 {
+  display: block;
+  width: 150px;
+  margin-top: 168px;
+  margin-bottom: 16px;
+}
+
+/*[ロゴ：Instagram, Tumblr, Facebook]を横並びに配置*/
+header ul {
+  display: flex;
+  column-gap: 48px;
+}
+
+/*[ロゴ：Instagram, Tumblr, Facebook]のサイズを30pxに指定*/
+header li {
+  display: block;
+  width: 30px;
+}
+/*main（=「About Me 」「Works」のブロック)を同じ比率で２カラムに配置*/
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 42px;
+  row-gap: 48px;
+  margin-left: 42px;
+  margin-right: 42px;
+}
+
+/*2カラム部分の挙動、余白、背景色をまとめて指定*/
+.works,
+.aboutme {
+  align-items: start;
+  background-color: #f6f6f6;
+  padding: 36px;
+  margin-top: 42px;
+  margin-bottom: 42px;
+}
+/*[ロゴ：01. About Me] の画像サイズ、余白を指定*/
+.aboutme-logo {
+  display: block;
+  width: 200px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-bottom: 42px;
+}
+/* [ 近藤彩 | Aya Kondo ]のフォントサイズを指定 */
+.name {
+  font-size: 20px;
+}
+
+/*section中の[h3]のフォントサイズ、フォントウェイト、余白を指定*/
+section h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 42px;
+  margin-bottom: 16px;
+}
+/*section中の[h4]のフォントサイズ、フォントウェイト、色を指定*/
+section h4 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #6e7172;
+}
+/*「経歴」の詳細部分をグリッドで指定*/
+/*「1fr 4fr」でトラックサイズを指定*/
+.history {
+  display: grid;
+  grid-template-columns: 1fr 4fr ;
+  column-gap: 16px;
+  row-gap: 16px;
+}
+/*「スキル」の詳細部分をグリッドで指定し余白を統一、トラックサイズを固定*/
+.skill li {
+  display: grid;
+  grid-template-columns: 150px 320px;
+  column-gap: 16px;
+  row-gap: 16px;
+  align-items: center;
+}
+/*レベルバーの画像サイズを320pxで指定*/
+.figma-img, .clipstudiopaint-img, .adobeillustrator-img {
+  display: block;
+  width: 320px;
+}
+/*section中ol指定箇所の余白を統一*/
+section ol {
+  display: grid;
+  row-gap: 16px;
+}
+
+/*[ロゴ：02. works]の画像サイズ、余白を指定*/
+.works-logo {
+  display: block;
+  width: 140px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-bottom: 42px;
+}
+
+/*works中のul指定箇所をグリッドで指定し、余白を統一*/
+.works ul {
+  display: grid;
+  row-gap: 42px;
+  margin-top: 36px;
+  margin-bottom: 36px;
+}
+/*.works li (=UI Design, Painting, Embroidery)を中央揃え*/
+/*画像の表示サイズを高さを基準に指定*/
+/*フォントサイズ、フォントウェイト、色を指定*/
+.works li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  font-size: 36px;
+  font-weight: 500;
+  color: #f6f6f6;
+}
+/*画像を指定*/
+.uidesign {
+  background-image: url(/final/images/uidesign.svg);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.painting {
+  background-image: url(/final/images/painting.svg);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.embroidery {
+  background-image: url(/final/images/embroidery.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/*footerにロゴをflexで配置、背景色を指定*/
+footer {
+  display: flex;
+  background-color: #f6f6f6;
+  align-items: center;
+  column-gap: 24px;
+  padding: 24px 42px;
+}
+/*[ロゴ：AYA body of works]の画像サイズを指定*/
+footer p {
+  display:block;
+  width: 100px;
+}
+/*[ロゴ：Instagram, Tumblr, Facebook]を横並びに配置*/
+footer ul {
+  display: flex;
+  column-gap: 16px;
+}
+/*[ロゴ：Instagram, Tumblr, Facebook]の画像サイズを25pxで指定*/
+footer li {
+  display: block;
+  width: 25px;
+}
